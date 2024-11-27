@@ -1,0 +1,753 @@
+/* Reset léger pour uniformiser le rendu de base */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    /* Assure une taille de base cohérente */
+    line-height: 1.6;
+    /* Espacement de ligne agréable */
+}
+
+body {
+    font-family: sans-serif;
+    /* Police générique par défaut */
+    color: #333;
+    /* Couleur de texte de base */
+    background-color: #fff;
+    /* Fond blanc */
+    -webkit-font-smoothing: antialiased;
+    /* Lissage de police pour Chrome */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    /* Évite le débordement horizontal des médias */
+    height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    /* Uniformise la police pour les formulaires */
+    border: none;
+    /* Supprime les bordures par défaut */
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    /* Enlève le soulignement */
+    color: inherit;
+    /* Conserve la couleur du texte environnant */
+}
+
+ul,
+ol {
+    list-style: none;
+    /* Supprime les puces et numérotations */
+}
+
+table {
+    border-collapse: collapse;
+    /* Uniformise les bordures de table */
+}
+
+blockquote,
+q {
+    quotes: none;
+    /* Supprime les guillemets par défaut */
+}
+
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/* header */
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 91Px;
+}
+.logo {
+    width: 61px;
+    height: 19px;
+
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+   
+}
+.navbar a{
+    padding:10px 30px 10px 30px; 
+    border-top:solid 3px transparent;
+}
+
+
+
+.navbar a:hover {
+    border-top: 3px solid #0065FC;
+    color: #0065FC;
+}
+
+/****titel****/
+h1 {
+    font-size: 22px;
+}
+
+/***** recherche ******/
+.info-group{
+    display: flex;
+    flex-direction: column;
+    gap: 20Px;
+    margin-top: 30px;
+}
+.search-bar{
+    display: flex;
+
+}
+
+ .icon {
+    width: 50px;
+    height: 49px;
+    background: #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bouton-search{
+    display: flex;
+}
+input {
+
+    text-align: center;
+    font-size: 19px;
+    border-top: solid 1px #F2F2F2;
+    border-bottom:solid 1px #F2F2F2;
+    outline: none;
+    font-weight: bold;
+    color: black;
+}
+
+input::placeholder {
+    opacity: 100%;
+    color: black;
+}
+
+
+
+
+.btn-search {
+
+    width:100%;
+    background-color: #0065FC;
+    color: white;
+    border-radius: 0px 25px 25px 0px;
+    font-weight: bold;
+
+}
+
+.mobile {
+    width: 49px;
+    height: 49px;
+    background-color: #0065FC;
+    color: white;
+    border-radius: 0px 25px 25px 0px;
+    visibility: hidden;
+}
+
+
+
+
+/******filtre******/
+.filtre {
+    display: flex;
+    gap: 20px;
+}
+
+.filtre h2 {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.filtre-option {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    border: solid 2px #f2f2f2;
+    font-size: 17px;
+    padding: 15px;
+    height: 50px;
+    gap: 10px;
+
+}
+
+.option:hover {
+    background-color: #DEEBFF;
+    border: solid 2px #D9D9D9
+}
+
+/****info****/
+.info {
+    display: flex;
+    padding-block: 20px;
+    gap: 10px;
+}
+
+.fas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0065FC;
+    border: 1px solid #D9D9D9;
+    width: 24px;
+    height: 24px;
+    font-size: 81%;
+    border-radius: 50px;
+}
+
+/****hebergements****/
+.hebergements{
+display: flex;
+flex-direction: column;
+ gap: 33px;
+ background-color: var(--main-bg-color);
+    width: 65%;
+    border-radius: 20px;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+
+.hebergements h2 { 
+     font-size: 22px;
+}
+
+
+.hebregements-hotel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+   
+}
+
+.hebergements-hotel a {
+    width: 31%;
+    height: 220px;
+    padding-top: 20px;
+
+}
+
+.hebergements-hotel .card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.hebergements-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    height: 100%;
+    /* filter: drop-shadow( 0px 3px 15px rgba(0,0,0,1)); */
+}
+
+.hebergements a{
+    display: flex;
+    flex-direction: column;
+    gap: 30PX;
+    width: 31%;
+}
+.hebergements-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 124px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.afficher-plus {
+    display: flex;
+    font-size: 18px;
+    
+}
+
+
+/****** Hebergements And Populaires ***********/
+
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+     border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+    background-color: var(--main-bg-color);
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/****** Activites ******/
+.activites{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    row-gap: 30px;
+    padding: 30px;
+    width: 100%;
+
+   
+}
+.container-activites{
+    display: flex;
+    gap: 30px;
+   
+}
+
+.activites-title {
+    font-size: 22px;
+}
+
+
+
+.card-activites {
+    display: flex;
+    flex-direction: column;
+}
+.card-activites img{ 
+    display: flex;
+    object-fit: cover;
+    border-radius: 25px 25px 0px 0px;
+    gap: 20px;
+   
+    height: 380px;
+
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: 82px;
+    box-shadow: 0px 3px 15px 0px #0000001A;
+    border-radius: 0 0 25px 25px;
+    margin-top: -5px;
+    padding: 15px;
+
+}
+.container-activites a{
+    width: 25%;
+}
+
+/****footer*****/
+
+footer {
+    margin-top: 30px;
+    width: auto;
+   
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: start;
+    gap: 20%;
+
+}
+
+ footer h5{
+    font-size: 18px;
+    padding:10px 15px
+ }
+
+footer ul {
+
+    margin-left: 15px;
+}
+
+footer li {
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+footer li a:hover {
+    border-top: none;
+    color: black;
+}
+
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px){
+    
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+    
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+    .container-activites {
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        padding-right: 20px;
+    }
+
+    .activites {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .card-activites img {
+        object-fit: cover;
+        width: 192px;
+        height: 200px;
+    }
+        
+
+    .title {
+        width: 100%;
+        height: 100px;
+        font-size: 16px;
+    }
+
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+    /* ... */
+    .main-container{
+        margin: auto;
+        padding: 0;
+        
+    }
+    /***hedear***/
+    header{
+        display: flex;
+        flex-direction: column;
+       justify-content: space-around;
+       
+      
+    }
+    header nav{ 
+        width: 100%;
+        
+    }
+    header nav a{
+        width: 50%;
+        border-bottom: solid 3px #F2F2F2;
+        display: flex;
+        justify-content: center;
+      
+    }
+    .navbar a{
+        border-top:none;
+        border-bottom: solid 3px #F2F2F2;
+    }
+    
+    .navbar a:hover{
+        border-top: none;
+        border-bottom: solid 3px #0065FC;
+        
+    }
+    .navbar{
+        height:auto;
+      
+    }
+
+
+
+    h1 {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+    .ptitle {
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    /**** btn****/
+        input {
+            width: auto;
+            
+
+        }
+    .icon{
+        margin-left: 20px;
+    }
+    .mobile {
+        display: flex;
+        width: 50px;
+        justify-content: center;
+        align-items: center;
+        background-color: #0065FC;
+        color: white;
+        border-radius: 15px;
+        visibility: visible;
+
+    }
+    
+    .btn-search{
+        display:none;
+    }
+     
+
+    /****filtre****/
+    .filtre {
+       display: flex;
+       flex-direction:column ;
+    }
+    .filtre h2{
+        padding-left: 20px;
+    }
+
+    .filtre-option {
+       
+        padding: 0 20px;
+
+    }
+
+    .option {
+        width: 47%;
+        height: 50px;
+        font-size: 14px;
+        
+    }
+    .info{
+        padding-left: 20px;
+    }
+
+    /***hebergements-and-populaires***/
+    .hebergements-and-populaires  {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 20px;
+        
+     }
+         .hebergements-and-populaires section{
+            border-radius:0;
+         }
+    
+     
+    .hebergements{
+        background-color:transparent
+    }
+    .hebergements a{
+        width: 100%;
+    }
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    .hebregements-hotel {
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .hebergements-card{
+        background-color:white;
+        box-shadow: 0px 3px 15px 0px #0000001A;
+    }
+
+    .hebergements-card img {
+        width: 100%;
+    }
+
+    .container-activites img {
+        display: flex;
+        width: 100%;
+    }
+
+    .container-activites {
+        display: inline-block;
+
+    }
+
+    .title {
+        width: 100%;
+    }
+
+    .card-activites {
+        padding-top: 20px;
+    }
+
+
+    /***footer***/
+    footer {
+        flex-direction: column;
+        height: auto;
+        row-gap: 10px;
+    }
+}
